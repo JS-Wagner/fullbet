@@ -1,0 +1,12 @@
+@import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+.nav-item{
+  margin-right: 15px;
+}
+
+/*@media (max-width: 450px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+  }
+}*/

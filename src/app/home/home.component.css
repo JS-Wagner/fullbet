@@ -1,0 +1,68 @@
+/* Estilos generales */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  section {
+    padding: 20px;
+  }
+  
+  /* Estilos específicos para la sección hero */
+  
+  #hero {
+    background-color: #f8f9fa;
+    color: #333;
+    text-align: center;
+    padding: 100px 0;
+  }
+  
+  #hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  
+  #hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #ff6600;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #e65300;
+  }
+  
+  
