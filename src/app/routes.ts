@@ -1,8 +1,8 @@
-import { Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { ServicesComponent } from './services/services.component';
-import { ContactComponent } from './contact/contact.component';
+/*import { Routes } from '@angular/router';
+import { HomeComponent } from '../components/home/home.component';
+import { AboutComponent } from '../components/about/about.component';
+import { ServicesComponent } from '../components/services/services.component';
+import { ContactComponent } from '../components/contact/contact.component';
 
 const routeConfig: Routes = [
     {
@@ -30,3 +30,4 @@ const routeConfig: Routes = [
 ];
 
 export default routeConfig;
+*/
