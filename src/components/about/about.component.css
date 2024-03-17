@@ -1,8 +1,11 @@
+@import url(../../../node_modules/bootstrap/dist/css/bootstrap.min.css);
+
 .about-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: black;
   }
   
   .about-content {
@@ -25,6 +28,72 @@
     animation-name: fadeIn;
     animation-duration: 1s;
   }
+
+  /* CAROUSEL */
+
+  .carousel {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+  }
+  
+  .carousel-container {
+    display: flex;
+    width: 400%;
+  }
+  
+  .carousel-slide {
+    flex: 1;
+    margin-right: 20px;
+    transition: transform 0.5s ease;
+  }
+  
+  .carousel-slide h2 {
+    font-size: 2.5em;
+    color: #333;
+  }
+  
+  .carousel-slide p {
+    font-size: 1.2em;
+    color: #666;
+  }
+  
+  .prev-slide,
+  .next-slide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .prev-slide {
+    left: 0;
+  }
+  
+  .next-slide {
+    right: 0;
+  }
+
+  @media (max-width: 600px) {
+    .carousel-slide {
+      padding-right: 10px; /* Reducir el espacio entre slides en pantallas pequeñas */
+    }
+    
+    .prev-slide,
+    .next-slide {
+      font-size: 14px; /* Reducir el tamaño de la fuente de los botones en pantallas pequeñas */
+      padding: 8px; /* Reducir el espacio interior de los botones en pantallas pequeñas */
+      position: relative;
+    }
+  }
+
+  
+  /* KEYFRAMES */
   
   @keyframes fadeIn {
     from {

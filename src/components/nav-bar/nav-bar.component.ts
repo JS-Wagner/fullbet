@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -13,10 +13,24 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   styleUrl: './nav-bar.component.css'
 })
 export class NavBarComponent {
-  
+  window: any;
   isCollapsed: boolean = false;
+
+  constructor() {
+    this.checkScreenSize();
+  }
+
+  ngOnInit() {
+    this.checkScreenSize();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.checkScreenSize();
+  }
   
   checkScreenSize() {
+  if (typeof window !== 'undefined') {
     const screenWidth = window.innerWidth;
     if (screenWidth < 450) {
       this.isCollapsed = true;
@@ -24,12 +38,6 @@ export class NavBarComponent {
       this.isCollapsed = false;
     }
   }
+}
 
-  ngOnInit() {
-    this.checkScreenSize();
-  }
-
-  onResize(event: Event) {
-    this.checkScreenSize();
-  }
 }

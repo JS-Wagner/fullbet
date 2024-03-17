@@ -1,68 +1,104 @@
 /* Estilos generales */
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+/* Estilos específicos para pantallas más pequeñas (móviles) */
+@media screen and (max-width: 768px) {
+  .video-section {
+    min-height: 300px; /* Ajustar la altura mínima del contenedor */
+    flex-direction: column;
   }
-  
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+
+  video {
+    height: auto; /* Permitir que el video mantenga su relación de aspecto */
   }
-  
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+
+  .video-section h1 {
+    font-size: 0.7em; /* Reducir el tamaño del h1 en pantallas pequeñas */
+    margin-bottom: 10px; /* Ajustar el margen inferior */
   }
-  
-  nav ul li {
-    display: inline;
-    margin-right: 20px;
+
+  .video-section p {
+    font-size: 0.5em; /* Reducir el tamaño del párrafo en pantallas pequeñas */
+    margin-bottom: 20px; /* Ajustar el margen inferior */
   }
-  
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  section {
-    padding: 20px;
-  }
-  
-  /* Estilos específicos para la sección hero */
-  
-  #hero {
-    background-color: #f8f9fa;
-    color: #333;
-    text-align: center;
-    padding: 100px 0;
-  }
-  
-  #hero h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-  }
-  
-  #hero p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-  }
-  
-  .btn {
-    display: inline-block;
-    background-color: #ff6600;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  
-  .btn:hover {
-    background-color: #e65300;
-  }
-  
-  
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.video-section {
+  position: relative; /* Ajuste importante */
+  top: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden; /* Ajuste importante */
+  display: flex; /* Para centrar verticalmente el contenido */
+  justify-content: center; /* Para centrar verticalmente el contenido */
+  align-items: center; /* Para centrar verticalmente el contenido */
+  text-align: center; /* Para centrar el contenido en dispositivos móviles */
+}
+
+video {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover; /* Ajuste para que el video cubra todo el contenedor */
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+}
+
+.video-section h1 {
+  font-size: 4em; /* Tamaño de fuente grande */
+  color: #fff; /* Color de texto blanco */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efecto de sombra */
+  margin-bottom: 20px; /* Espaciado inferior */
+}
+
+.video-section p {
+  font-size: 1.5em; /* Tamaño de fuente grande */
+  color: #fff; /* Color de texto blanco */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efecto de sombra */
+  margin-bottom: 30px; /* Espaciado inferior */
+}
+
+.video-section h1::after,
+.video-section p::after {
+  content: ""; /* Pseudo-elemento para el efecto de llamada de atención */
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #ff6600; /* Color de línea */
+  margin-top: 10px; /* Espaciado superior */
+}
+
+/* Estilos específicos para la sección hero */
+
+.btn {
+  display: inline-block;
+  background-color: #ff6600;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #e65300;
+}
+
+.section-2{
+  margin: 0 auto;
+  padding: 0.5em;
+  text-align: center;
+  margin: 0.5em;
+  background-image: url(../../assets/hitler.gif);
+  background-size: cover;
+}

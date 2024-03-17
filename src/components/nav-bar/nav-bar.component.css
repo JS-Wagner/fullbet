@@ -1,12 +1,31 @@
 @import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
-.nav-item{
-  margin-right: 15px;
-}
+@media (min-width: 992px){
+.navbar-expand-lg .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+    justify-content: flex-end;
+    flex-direction: row;
+}}
 
-/*@media (max-width: 450px) {
+
+@media (max-width: 450px) {
   .nav {
     display: flex;
     flex-direction: column;
   }
-}*/
+}
+
+.nav-item{
+  margin-right: 15px;
+  color: rgb(39, 206, 150);
+}
+
+.nav-link{
+  color: aqua;
+}
+
+.bg-primary{
+  --bs-bg-opacity: 0.5;
+  background-color: rgba(99, 95, 95, 0.836) !important;
+}

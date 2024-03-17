@@ -1,15 +1,62 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./about.component.css"> <!-- Agrega aquí tu archivo de estilos CSS -->
-</head>
-<body>
-<section class="about-container">
-    <div class="about-content">
+<section class="carousel">
+  <div class="carousel-container">
+    <div class="carousel-slide">
       <h2>Acerca de Nosotros</h2>
-      <p>Somos una agencia de marketing digital y brand growth comprometida con el éxito de nuestros clientes. Nuestra misión es ayudarte a alcanzar tus objetivos a través de estrategias innovadoras y soluciones creativas.</p>
+      <p>
+        Bienvenido a Balkan Agency, tu socio estratégico en el crecimiento
+        empresarial y la excelencia en marketing y branding. En Balkan Agency,
+        entendemos que el éxito en el competitivo panorama empresarial actual no
+        se trata solo de tener un buen producto o servicio, sino de cómo
+        presentarlo al mundo y cómo conectar con tu audiencia de manera
+        significativa. Desde nuestra fundación, hemos estado comprometidos con
+        una misión clara: potenciar el crecimiento y la presencia de las marcas,
+        desde startups hasta empresas consolidadas. Nuestro enfoque se centra en
+        comprender profundamente las necesidades y objetivos únicos de cada
+        cliente para crear estrategias personalizadas que generen resultados
+        tangibles y duraderos.
+      </p>
     </div>
-  </section>
-  
+    <div class="carousel-slide">
+      <h2>Nuestro Equipo</h2>
+      <p>
+        ¿Qué nos distingue en Balkan Agency? Nuestra combinación de experiencia,
+        creatividad y pasión por la innovación. Nuestro equipo está compuesto
+        por expertos en diversas áreas, desde consultores de estrategia y
+        especialistas en marketing digital hasta diseñadores creativos y
+        desarrolladores web. Juntos, ofrecemos un enfoque integral que abarca
+        desde la conceptualización de la marca hasta la ejecución de campañas
+        digitales de vanguardia.
+      </p>
+    </div>
+    <div class="carousel-slide">
+      <h2>Nuestra Filosofía</h2>
+      <p>
+        En Balkan Agency, creemos en la colaboración estrecha y la transparencia
+        total con nuestros clientes. Nos consideramos más que un proveedor de
+        servicios; somos tu socio de confianza en el viaje hacia el éxito
+        empresarial. Nos comprometemos a escucharte, entender tus desafíos y
+        trabajar incansablemente para superar tus expectativas en cada proyecto
+        que emprendamos juntos. Nuestra experiencia abarca una amplia gama de
+        industrias y mercados, lo que nos permite ofrecer soluciones adaptadas a
+        cualquier contexto empresarial.
+      </p>
+    </div>
+    <div class="carousel-slide">
+      <h2>Nuestro Compromiso</h2>
+      <p>
+        Ya sea que estés buscando lanzar una nueva marca, expandir tu presencia
+        en línea o revitalizar una estrategia de marketing existente, en Balkan
+        Agency tenemos las habilidades y la experiencia necesarias para ayudarte
+        a alcanzar tus metas. Únete a nuestra creciente lista de clientes
+        satisfechos y descubre cómo podemos impulsar el crecimiento y la
+        prosperidad de tu empresa. En Balkan Agency, no solo construimos marcas;
+        creamos relaciones sólidas y duraderas basadas en el éxito mutuo.
+        ¡Estamos aquí para ayudarte a alcanzar nuevas alturas!
+      </p>
+    </div>
+  </div>
+  <button class="prev-slide" (click)="prevSlide()">&#10094;</button>
+  <button class="next-slide" (click)="nextSlide()">&#10095;</button>
+</section>
+
+
