@@ -1,12 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ContactService } from '../../app/services/contact.service';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
   imports: [
     ReactiveFormsModule,
+    NgIf
   ],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
@@ -23,15 +25,17 @@ export class ContactComponent{
   }
 
   async onSubmit(){
-    if(this.contactForm.valid){
-      const response = await this.contactService.addContact(this.contactForm.value);
-      console.log(response);
-      /*this.contactService.createContact(this.contactForm.value).subscribe({
-        next: (response) => {
-          console.log(response);
-        })}*/
-    } else {
-      this.contactForm.markAllAsTouched();
+    try{
+      if(this.contactForm.valid){
+        const response = await this.contactService.addContact(this.contactForm.value);
+        console.log(response);
+      } else {
+        console.log("Invalid Form");
+        this.contactForm.markAllAsTouched();
+      }
+    }
+    catch (error) {
+      console.log(error);
     }
   }
 }
