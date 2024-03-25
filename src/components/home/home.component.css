@@ -22,15 +22,9 @@
   }
 }
 
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: Arial, sans-serif;
-}
-
 .video-section {
   position: relative; /* Ajuste importante */
+  flex-direction: column;
   top: 0;
   width: 100%;
   min-height: 100vh;
@@ -98,7 +92,11 @@ video {
   margin: 0 auto;
   padding: 0.5em;
   text-align: center;
-  margin: 0.5em;
-  background-image: url(../../assets/hitler.gif);
+  border: 0;
+  background-color: white;
   background-size: cover;
+}
+
+.row{
+  align-items: center;
 }

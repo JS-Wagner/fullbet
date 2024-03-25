@@ -1,47 +1,52 @@
+<section class="video-section" id="section1">
+  <video
+    muted
+    autoplay
+    loop
+    playsinline=""
+    preload="metadata"
+    onloadedmetadata="this.muted=true"
+    poster="https://freebirdagency.com/wp-content/uploads/freebird_back_3-1600x1067.jpg"
+  >
+    <source src="../../assets/storm.mp4" type="video/mp4" />
+  </video>
+  <h1>We're all ears (and whiskers) to your needs</h1>
+  <p>Don't just tread water. Contact us now and let's ride the marketing currents together.</p>
+</section>
+
+<div>
+  <h2>You found us, that’s amazing!</h2>
+</div>
+
 <section class="contact-container">
   <div class="contact-content">
-    <h2>Contacto</h2>
-    <form>
-      <input type="text" placeholder="Nombre" />
-      <input type="email" placeholder="Correo electrónico" />
-      <input type="tel" placeholder="Teléfono" />
-      <!-- Nuevo campo para número de teléfono -->
-      <textarea placeholder="Mensaje"></textarea>
-      <div class="services-section">
-        <h3>Servicios de Interés</h3>
-        <div class="service-item">
-          <input type="checkbox" id="service1" name="service1" />
-          <label for="service1">
-            <img
-              src="https://cdn.vectorstock.com/i/1000x1000/72/99/number-1-black-template-design-vector-33577299.webp"
-              alt="Servicio 1"
-            />
-            <span>Servicio 1</span>
-          </label>
-        </div>
-        <div class="service-item">
-          <input type="checkbox" id="service2" name="service2" />
-          <label for="service2">
-            <img
-              src="https://previews.123rf.com/images/rondale/rondale1507/rondale150700307/42792782-vector-number-two-2-hand-drawn-with-dry-brush.jpg"
-              alt="Servicio 2"
-            />
-            <span>Servicio 2</span>
-          </label>
-        </div>
-        <div class="service-item">
-          <input type="checkbox" id="service3" name="service3" />
-          <label for="service3">
-            <img
-              src="https://cdn.vectorstock.com/i/1000x1000/89/19/graffiti-sprayed-number-3-three-in-black-on-white-vector-14148919.webp"
-              alt="Servicio 3"
-            />
-            <span>Servicio 3</span>
-          </label>
-        </div>
-        <!-- Agrega más servicios según sea necesario -->
+    <h2>Contact form</h2>
+    <form [formGroup]="contactForm" class="w-full" (ngSubmit)="onSubmit()" novalidate>
+      <div class="mb-5">
+        <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Full name</label>
+        <input type="text" id="name" class="form-control" placeholder="Name" formControlName="name">
+        @if (contactForm.get('name')?.hasError('required') && contactForm.get('name')?.touched) {
+        <div class="form-error">Name is required</div>
+        }
       </div>
-      <button>Enviar</button>
+      <div class="mb-5">
+        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email Address</label>
+        <input type="email" pattern="email" id="email" class="form-control" placeholder="Address" formControlName="email">
+        @if (contactForm.get('email')?.hasError('required') && contactForm.get('email')?.touched || contactForm.get('email')?.hasError('email') && contactForm.get('email')?.touched) {
+        <div class="form-error">Email is required</div>
+        <div class="form-error">Email format is invalid</div>
+        }
+      </div>
+      <div class="mb-5">
+        <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Message</label>
+        <input type="text" maxlength="500" id="message" class="form-control" placeholder="Type Something" formControlName="message">
+        @if (contactForm.get('message')?.hasError('required') && contactForm.get('message')?.touched) {
+        <div class="form-error">Message is required</div>
+        }
+      </div>
+  
+      <button type="submit"
+    class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg w-full sm:w-auto px-5 py-2.5 text-center">Submit</button>
     </form>
   </div>
 </section>

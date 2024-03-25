@@ -1,7 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
-
-body, html {
+html, body{
     margin: 0;
     padding: 0;
-    height: 100%;
-  }
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+
+body{
+    /*background: linear-gradient(#1B5C6C, #33150D);*/
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+p{
+    margin: 0;
+}

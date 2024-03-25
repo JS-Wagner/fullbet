@@ -1,25 +1,52 @@
+
+@media screen and (max-width: 768px) {
+  .contact-content{
+    margin-bottom: 50px;
+  } 
+  .contact-content form{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .contact-content input,
+  .contact-content textarea,
+  .contact-content button {
+  padding-left: 50px;
+  padding-right: 50px;
+  }
+} 
+
 .contact-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 150vh;
   background-color: #f4f4f4; /* Color de fondo */
   background-image: url('../../assets/fotoContacto.svg'); /* Imagen de fondo */
   background-size: cover;
   background-position: center;
   overflow: hidden; /* Oculta el desbordamiento del fondo animado */
   padding: 100px;
+  padding-bottom: 200px;
 }
 
 .contact-content {
   text-align: center;
-  padding: 30px;
+  padding: 60px;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.9); /* Fondo del contenido con transparencia */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra */
   transition: transform 0.3s ease;
   animation: fadeInUp 1s ease;
   margin: 20px;
+  margin-bottom: 10px;
+}
+
+div h2{
+  margin: 0px;
+  font-size: 50px;
+  text-align: center;
+  padding-bottom: 30px;
+  padding-top: 30px;
 }
 
 .contact-content h2 {
@@ -39,7 +66,7 @@
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 5%;
   font-size: 16px;
   box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
   text-align: center; /* Centra el texto */
@@ -137,3 +164,109 @@
   color: red; /* Cambia el color al hacer clic en el elemento */
 }
 
+/* ESTILOS DEL VIDEO */
+
+/* Estilos específicos para pantallas más pequeñas (móviles) */
+@media screen and (max-width: 768px) {
+  .video-section {
+    min-height: 300px; /* Ajustar la altura mínima del contenedor */
+    flex-direction: column;
+  }
+
+  video {
+    height: auto; /* Permitir que el video mantenga su relación de aspecto */
+  }
+
+  .video-section h1 {
+    font-size: 0.7em; /* Reducir el tamaño del h1 en pantallas pequeñas */
+    margin-bottom: 10px; /* Ajustar el margen inferior */
+  }
+
+  .video-section p {
+    font-size: 0.5em; /* Reducir el tamaño del párrafo en pantallas pequeñas */
+    margin-bottom: 20px; /* Ajustar el margen inferior */
+  }
+}
+
+.video-section {
+  position: relative; /* Ajuste importante */
+  flex-direction: column;
+  top: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden; /* Ajuste importante */
+  display: flex; /* Para centrar verticalmente el contenido */
+  justify-content: center; /* Para centrar verticalmente el contenido */
+  align-items: center; /* Para centrar verticalmente el contenido */
+  text-align: center; /* Para centrar el contenido en dispositivos móviles */
+}
+
+video {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover; /* Ajuste para que el video cubra todo el contenedor */
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+}
+
+.video-section h1 {
+  font-size: 4em; /* Tamaño de fuente grande */
+  color: #fff; /* Color de texto blanco */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efecto de sombra */
+  margin-bottom: 20px; /* Espaciado inferior */
+}
+
+.video-section p {
+  font-size: 1.5em; /* Tamaño de fuente grande */
+  color: #fff; /* Color de texto blanco */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efecto de sombra */
+  margin-bottom: 30px; /* Espaciado inferior */
+}
+
+.video-section h1::after,
+.video-section p::after {
+  content: ""; /* Pseudo-elemento para el efecto de llamada de atención */
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #ff6600; /* Color de línea */
+  margin-top: 10px; /* Espaciado superior */
+}
+
+.button-providers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  button {
+    background: transparent;
+    font-family: inherit;
+    border: 1px solid white;
+    width: 100%;
+    max-width: 250px;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    min-height: 48px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all ease-in 0.25s;
+
+    &:hover {
+      background: var(--text);
+      color: var(--dark-text);
+    }
+
+    svg {
+      margin-right: 20px;
+    }
+  }
+}

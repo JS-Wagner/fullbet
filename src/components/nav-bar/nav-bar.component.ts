@@ -13,31 +13,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   styleUrl: './nav-bar.component.css'
 })
 export class NavBarComponent {
-  window: any;
   isCollapsed: boolean = false;
-
-  constructor() {
-    this.checkScreenSize();
-  }
-
-  ngOnInit() {
-    this.checkScreenSize();
-  }
-
-  @HostListener('window:resize', ['$event'])
-  onResize(event: Event) {
-    this.checkScreenSize();
-  }
-  
-  checkScreenSize() {
-  if (typeof window !== 'undefined') {
-    const screenWidth = window.innerWidth;
-    if (screenWidth < 450) {
-      this.isCollapsed = true;
-    } else {
-      this.isCollapsed = false;
-    }
-  }
-}
 
 }
