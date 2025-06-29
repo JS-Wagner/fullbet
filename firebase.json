@@ -4,7 +4,7 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
-    "public": "dist/freebet/browser",
+    "public": "dist/balkan-agency/browser",
     "ignore": [
       "firebase.json",
       "**/.*",

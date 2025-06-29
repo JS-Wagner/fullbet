@@ -1,4 +1,74 @@
-/* Estilos generales */
+.services-container {
+  position: relative;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.services-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://inicia.org.ar/wp-content/uploads/digital-marketing-training-in-bangalore.png'); /* Reemplaza con tu imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2; /* Ajusta la opacidad según sea necesario */
+}
+
+.services-content {
+  position: relative;
+  z-index: 1; /* Asegura que el contenido esté encima del fondo */
+  /*max-width: 1200px;*/
+  margin: 0 auto;
+}
+
+.services-content h2 {
+  font-size: 2.5em;
+  margin-bottom: 60px;
+  color: #333;
+  animation: fadeInUp 1s ease;
+}
+
+.service-item {
+  background-color: #fff;
+  border: 0.2px solid rgb(58, 58, 58);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+  animation: fadeInUp 1s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+}
+
+.service-item h3 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.service-item p {
+  font-size: 1.2em;
+  color: #666;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ESTILOS DEL VIDEO */
 
 /* Estilos específicos para pantallas más pequeñas (móviles) */
 @media screen and (max-width: 768px) {
@@ -70,33 +140,4 @@ video {
   height: 2px;
   background-color: #ff6600; /* Color de línea */
   margin-top: 10px; /* Espaciado superior */
-}
-
-/* Estilos específicos para la sección hero */
-
-.btn {
-  display: inline-block;
-  background-color: #ff6600;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.btn:hover {
-  background-color: #e65300;
-}
-
-.section-2{
-  margin: 0 auto;
-  padding: 0.5em;
-  text-align: center;
-  border: 0;
-  background-color: white;
-  background-size: cover;
-}
-
-.row{
-  align-items: center;
 }

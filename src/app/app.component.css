@@ -1,46 +1,5 @@
-:host {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background: #1a0a12;
-}
 
-.margindiv {
-  flex: 1 0 auto;
-  margin-left: 5%;
-  margin-right: 5%;
-  background: #1a0a12;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  padding-top: 48px; /* Ajusta este valor al alto real de tu navbar */
-}
-
-@media (max-width: 768px) {
-  .margindiv {
-    padding-top: 36px; /* Ajusta al alto real del navbar en móvil */
-  }
-  .banner-img-container {
-    height: 100vh; /* Más alto en mobile */
-    min-height: 260px;
-    margin-top: 0;
-  }
-  .banner-img {
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
-@media (max-width: 480px) {
-  .banner-img-container {
-    height: 100vh; /* Aún más alto en mobile pequeño */
-    min-height: 200px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .margindiv {
-    margin-left: 0;
-    margin-right: 0;
-  }
+.margindiv{
+    margin-left: 5%;
+    margin-right: 5%;
 }
