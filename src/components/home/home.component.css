@@ -1,102 +1,395 @@
 /* Estilos generales */
 
-/* Estilos específicos para pantallas más pequeñas (móviles) */
-@media screen and (max-width: 768px) {
-  .video-section {
-    min-height: 300px; /* Ajustar la altura mínima del contenedor */
-    flex-direction: column;
-  }
-
-  video {
-    height: auto; /* Permitir que el video mantenga su relación de aspecto */
-  }
-
-  .video-section h1 {
-    font-size: 0.7em; /* Reducir el tamaño del h1 en pantallas pequeñas */
-    margin-bottom: 10px; /* Ajustar el margen inferior */
-  }
-
-  .video-section p {
-    font-size: 0.5em; /* Reducir el tamaño del párrafo en pantallas pequeñas */
-    margin-bottom: 20px; /* Ajustar el margen inferior */
-  }
-}
-
-.video-section {
-  position: relative; /* Ajuste importante */
-  flex-direction: column;
-  top: 0;
-  width: 100%;
-  min-height: 100vh;
-  overflow: hidden; /* Ajuste importante */
-  display: flex; /* Para centrar verticalmente el contenido */
-  justify-content: center; /* Para centrar verticalmente el contenido */
-  align-items: center; /* Para centrar verticalmente el contenido */
-  text-align: center; /* Para centrar el contenido en dispositivos móviles */
-}
-
-video {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  object-fit: cover; /* Ajuste para que el video cubra todo el contenedor */
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -1;
-}
-
-.video-section h1 {
-  font-size: 4em; /* Tamaño de fuente grande */
-  color: #fff; /* Color de texto blanco */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efecto de sombra */
-  margin-bottom: 20px; /* Espaciado inferior */
-}
-
-.video-section p {
-  font-size: 1.5em; /* Tamaño de fuente grande */
-  color: #fff; /* Color de texto blanco */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efecto de sombra */
-  margin-bottom: 30px; /* Espaciado inferior */
-}
-
-.video-section h1::after,
-.video-section p::after {
-  content: ""; /* Pseudo-elemento para el efecto de llamada de atención */
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #ff6600; /* Color de línea */
-  margin-top: 10px; /* Espaciado superior */
-}
-
-/* Estilos específicos para la sección hero */
-
-.btn {
-  display: inline-block;
-  background-color: #ff6600;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.btn:hover {
-  background-color: #e65300;
-}
-
-.section-2{
+.section-2 {
   margin: 0 auto;
-  padding: 0.5em;
   text-align: center;
-  border: 0;
-  background-color: white;
+  background: #1a0a12;
   background-size: cover;
 }
 
-.row{
+.banner-img-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  background: #2d0a16;
+  margin-top: 0;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  border: 4px solid #d4af37;
+}
+
+#section2-title {
+  display: block;
+  width: 100%;
+  margin: 0px;
+  background-color: #2d0a16 !important;
+  color: #ffd700;
+  border-radius: 8px;
+  padding: 0.5em 1em;
+  margin-bottom: 1em;
+  border: 2px solid #d4af37;
+}
+
+.banner-zeus-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2d0a16;
+  border-bottom: 2px solid #d4af37;
+  padding: 1.5em 0 1em 0;
+}
+
+.banner-zeus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+#banner-zeus-img {
+  display: block;
+  width: 100%; /* Será sobrescrito por el script */
+  max-width: unset;
+  margin: 0 auto;
+}
+
+/* Imágenes alineadas */
+.img-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(241, 62, 38);
+  height: 100%;
+}
+
+.side-img,
+#raw-2 {
+  max-height: 160px;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.text-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(241, 62, 38);
+  height: 100%;
+}
+
+.contacto {
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+}
+
+.contacto-absolute {
+  position: absolute;
+  left: 50%;
+  /* Más abajo en desktop/tablet, más arriba en mobile */
+  top: 68%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  pointer-events: none; /* Permite que la imagen reciba eventos, pero... */
+}
+
+.contacto-content {
+  pointer-events: auto;
+  max-width: 700px;
+  width: 90%;
+  /* Quitar fondo y borde */
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin-bottom: 25px;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-img {
+  max-height: 90px;
+  width: auto;
+  display: block;
+  border: 2px solid #d4af37;
+  border-radius: 12px;
+  background: #1a0a12;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7em;
+}
+
+.contact-info p {
+  color: #fffbe0; /* Un amarillo claro para contraste */
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #2d0a16;
+  font-size: 1.5em; /* Valor original antes del aumento del 40% */
+  line-height: 1.2;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 90%;
+}
+
+.whatsapp-btn {
+  display: flex;
+  align-items: center;
+  background: #25d366;
+  color: #fff;
+  border: 2px solid #d4af37;
+  text-decoration: none;
+  padding: 0.6em 1.2em;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.1em; /* Valor original antes del aumento del 40% */
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1);}
+  50% { transform: scale(1.08);}
+  100% { transform: scale(1);}
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe57;
+  transform: scale(1.12) rotate(-2deg);
+  box-shadow: 0 0 18px #25d366, 0 0 8px #ffd700;
+}
+
+.whatsapp-icon {
+  width: 28px;
+  height: 28px;
+  margin-right: 0.6em;
+}
+
+@media (max-width: 1024px) {
+  .banner-img-container {
+    height: 90vh;
+    min-height: 420px;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-img-container {
+    height: 100vh;
+    min-height: 480px;
+    margin-top: 0;
+  }
+
+  @media (max-width: 768px) {
+    .section-2[_ngcontent-ng-c3720465000] {
+        margin-top: 0em;
+    }
+  }
+
+  #section2-title {
+    font-size: 1.2em;
+    padding: 0.4em 0.5em;
+  }
+
+  .banner-zeus-section {
+    padding: 1em 0 0.5em 0;
+  }
+
+  .contacto-absolute {
+    top: 65%;
+  }
+
+  .contacto-content {
+    padding: 1em 0.5em;
+    width: 98%;
+  }
+
+  .contact-img {
+    max-height: 120px;
+    width: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .contact-img.left-img {
+    order: 1;
+  }
+  .contact-info {
+    order: 2;
+    width: 100%;
+    align-items: center;
+  }
+  .contact-img.right-img {
+    order: 3;
+  }
+
+  .whatsapp-btn {
+    font-size: 1em;
+    padding: 0.7em 1em;
+    width: 100%;
+    justify-content: center;
+  }
+
+  #banner-zeus-img {
+    max-width: 95vw;
+    width: 100% !important;
+    height: auto;
+  }
+
+  .section-special img {
+    max-width: 95vw;
+    max-height: 200px;
+  }
+
+  /* Mueve el h2 (y el resto de section-2) más abajo para evitar superposición */
+  .section-2 {
+    margin-top: 8em;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-img-container {
+    height: 80vh;         /* Reduce el alto para móviles pequeños */
+    min-height: 260px;
+    margin-top: 0;
+    width: 100vw;         /* Asegura que no se escape del viewport */
+    left: 0;
+    right: 0;
+    border-radius: 0;
+  }
+  .banner-img {
+    width: 100vw;         /* Que la imagen nunca se desborde */
+    max-width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    margin: 0;
+    left: 0;
+    right: 0;
+    display: block;
+  }
+  .contact-info p {
+    font-size: 1.2em;     /* 20% más pequeño que el valor base */
+  }
+  .whatsapp-btn {
+    font-size: 0.9em;     /* 20% más pequeño que el valor base */
+    padding: 0.5em 0.8em;
+  }
+}
+
+.section-special {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  margin: 2em 0;
+}
+
+.special-img {
+  display: block;
+  max-width: 100%;
+  max-height: 350px;
+  width: auto;
+  height: 320px;
+  object-fit: contain;
+  border: 4px solid #d4af37;
+  border-radius: 18px;
+  background: #1a0a12;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+@media (max-width: 768px) {
+  .special-img {
+    max-width: 95vw;
+    max-height: 160px;
+    height: 120px;
+  }
+  .section-special {
+    gap: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+  .contacto-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contacto-content {
+    max-width: 700px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    margin-top: 70px;
+  }
+}
+
+.section-special {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.contacto-content {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.section-2 h2 {
+  color: #ffd700;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0.5em 0 1em 0;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 8px #2d0a16, 0 0 12px #ffd700;
+  background: linear-gradient(37deg, #ffc107 0%, #ffd700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  display: inline-block;
+  animation: shine 2.5s infinite linear;
+}
+
+@keyframes shine {
+  0% { filter: brightness(1); }
+  50% { filter: brightness(1.4); }
+  100% { filter: brightness(1); }
+}
+
+/* GIF llamativo junto al h2 */
+.h2-gif {
+  vertical-align: middle;
+  margin-left: 0.5em;
+  height: 2.2em;
+  width: auto;
+  display: inline-block;
+  filter: drop-shadow(0 0 8px #ffd700);
 }
